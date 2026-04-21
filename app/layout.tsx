@@ -1,17 +1,30 @@
 import type { Metadata } from "next";
+import { Fraunces, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 const description =
-  "AI back-office built for general contractors. Respond to every lead in under 60 seconds. Live in two weeks.";
+  "MoonHouse deploys AI agents across 20 industries. 160 production-ready agents — operator-built, vertical-aware, live in weeks.";
 
 export const metadata: Metadata = {
-  title: "MoonHouse — AI Back Office for General Contractors",
+  title: "MoonHouse — AI agents for operators who run real businesses",
   description,
   metadataBase: new URL("https://moonhouse.ai"),
   openGraph: {
-    title: "MoonHouse — AI Back Office for General Contractors",
+    title: "MoonHouse — AI agents for operators who run real businesses",
     description,
     url: "https://moonhouse.ai",
     siteName: "MoonHouse",
@@ -19,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MoonHouse — AI Back Office for General Contractors",
+    title: "MoonHouse — AI agents for operators who run real businesses",
     description,
   },
   robots: { index: true, follow: true },
@@ -29,7 +42,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body>
         {children}
         <Analytics />

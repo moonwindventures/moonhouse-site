@@ -12,10 +12,11 @@ export default function Icon() {
     (
       <div
         style={{
-          fontSize: 22,
-          fontWeight: 800,
-          background: "#fbf8f3",
-          color: "#c8501e",
+          fontSize: 20,
+          fontWeight: 600,
+          background:
+            "linear-gradient(135deg, #0a0e1a 0%, #141b2d 100%)",
+          color: "#c9a3ff",
           width: "100%",
           height: "100%",
           display: "flex",
