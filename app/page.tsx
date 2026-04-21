@@ -267,11 +267,11 @@ export default function Page() {
           <div className="mt-10 grid gap-12 md:grid-cols-5">
             <div className="md:col-span-3">
               <p className="text-lg text-[#f5f7fa]">
-                MoonHouse was founded by operators running businesses across
-                construction, real estate, and services. The agents in this
-                catalog were battle-tested inside those companies — answering
-                real calls, qualifying real leads, shipping real invoices —
-                before we offered them to anyone else.
+                MoonHouse was founded by operators running real businesses
+                across multiple industries. The agents in this catalog were
+                battle-tested inside those companies — answering real calls,
+                qualifying real leads, shipping real invoices — before we
+                offered them to anyone else.
               </p>
               <p className="mt-6 text-[#8b9bb4]">
                 We're not selling software for you to figure out. We deploy the
@@ -279,6 +279,21 @@ export default function Page() {
                 measure the outcome. If it doesn't pay for itself, we eat the
                 cost.
               </p>
+
+              <div className="mt-10 grid gap-6 sm:grid-cols-2">
+                <FounderCard
+                  initials="KS"
+                  name="Kyle Schneider"
+                  role="Co-Founder"
+                  email="kyle@moonhouse.ai"
+                />
+                <FounderCard
+                  initials="KD"
+                  name="Kassra Daneshmir"
+                  role="Co-Founder"
+                  email="kassra@moonhouse.ai"
+                />
+              </div>
             </div>
             <div className="md:col-span-2">
               <div className="border-t border-[#2a3450] pt-6">
@@ -312,7 +327,7 @@ export default function Page() {
             <div className="mt-10 flex flex-col items-center gap-4">
               <CTA variant="primary">Book a 30-minute call</CTA>
               <div className="font-mono text-xs tracking-widest text-[#5a6b85]">
-                kyle@moonhouse.ai · (818) 399-5833
+                kyle@moonhouse.ai · kassra@moonhouse.ai · (818) 399-5833
               </div>
             </div>
           </div>
@@ -322,12 +337,7 @@ export default function Page() {
       {/* Footer */}
       <footer className="border-t border-[#1e2638]">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-12 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-4">
-            <Wordmark />
-            <span className="font-mono text-xs text-[#5a6b85]">
-              A Moonwind Ventures company
-            </span>
-          </div>
+          <Wordmark />
           <div className="font-mono text-xs text-[#5a6b85]">
             Los Angeles, CA · moonhouse.ai
           </div>
@@ -351,6 +361,49 @@ function Stat({ v, k }: { v: string; k: string }) {
       </div>
       <div className="mt-1 font-mono text-xs uppercase tracking-widest text-[#5a6b85]">
         {k}
+      </div>
+    </div>
+  );
+}
+
+function FounderCard({
+  initials,
+  name,
+  role,
+  email,
+}: {
+  initials: string;
+  name: string;
+  role: string;
+  email: string;
+}) {
+  return (
+    <div className="flex items-start gap-4 border border-[#1e2638] bg-[#111827] p-5 transition-colors duration-200 hover:border-[#2a3450]">
+      <div
+        className="flex h-14 w-14 flex-shrink-0 items-center justify-center font-serif text-lg"
+        style={{
+          fontWeight: 500,
+          background:
+            "linear-gradient(135deg, rgba(107,142,255,0.18), rgba(201,163,255,0.18))",
+          color: "#c9a3ff",
+          border: "1px solid #2a3450",
+        }}
+      >
+        {initials}
+      </div>
+      <div className="flex flex-col">
+        <div className="font-serif text-lg text-[#f5f7fa]" style={{ fontWeight: 500 }}>
+          {name}
+        </div>
+        <div className="mt-0.5 font-mono text-[11px] uppercase tracking-widest text-[#5a6b85]">
+          {role}
+        </div>
+        <a
+          href={`mailto:${email}`}
+          className="mt-2 text-sm text-[#8b9bb4] hover:text-[#6b8eff]"
+        >
+          {email}
+        </a>
       </div>
     </div>
   );
