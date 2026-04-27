@@ -1,4 +1,4 @@
-const CALENDLY_URL = "https://calendly.com/kyle-moonhouse/30min";
+const CALENDLY_URL = "https://calendly.com/moonhouse";
 
 const VERTICALS: { name: string; glyph: string; blurb: string }[] = [
   { name: "Construction", glyph: "CO", blurb: "GCs, specialty contractors, developers, engineering firms, homebuilders" },
