@@ -274,9 +274,9 @@ export default function Page() {
                 offered them to anyone else.
               </p>
               <p className="mt-6 text-[#8b9bb4]">
-                We're not selling software for you to figure out. We deploy the
+                We&apos;re not selling software for you to figure out. We deploy the
                 agent, configure every integration, and manage it ongoing. You
-                measure the outcome. If it doesn't pay for itself, we eat the
+                measure the outcome. If it doesn&apos;t pay for itself, we eat the
                 cost.
               </p>
 
@@ -304,7 +304,7 @@ export default function Page() {
                   <li>— 2-week build and deploy</li>
                   <li>— 30-day monitored pilot</li>
                   <li>— Outcome-based retention</li>
-                  <li>— Full exit ramp if it doesn't land</li>
+                  <li>— Full exit ramp if it doesn&apos;t land</li>
                 </ul>
               </div>
             </div>
@@ -321,7 +321,7 @@ export default function Page() {
               Which vertical do you run?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-[#8b9bb4]">
-              30 minutes. We'll walk through your current workflow and tell you
+              30 minutes. We&apos;ll walk through your current workflow and tell you
               honestly — with numbers — whether MoonHouse makes sense.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4">
